@@ -1,0 +1,93 @@
+<style>
+    footer {
+        background-color: #333;
+        padding: 40px 0;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Allow items to wrap */
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Added margin between sections */
+    }
+
+    .footer-logo {
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        color: #ccc;
+    }
+
+    .footer-contact {
+        margin-top: 20px; /* Added margin on top */
+        color: #ccc; /* Lighter color for contact info */
+    }
+
+    .footer-links {
+        margin-top: 20px; /* Added margin on top */
+    }
+
+    .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #fff;
+    }
+</style>
+
+<footer>
+    <div class="footer-container">
+        <!-- Logo -->
+        <div class="footer-section">
+            <a href="#" class="footer-logo">MyId</a>
+            <!-- Social links -->
+            <div class="footer-social">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24"><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24"><path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2" stroke="none"/></svg></a>
+            </div>
+        </div>
+        <!-- Contact information -->
+        <div class="footer-section footer-contact">
+            <p>Email: khandareaniket@gmail.com</p>
+            <p>Phone:9890458431</p>
+        </div>
+        <!-- Links to other pages -->
+        <div class="footer-section footer-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'home' %}">About</a>
+            <a href="{% url 'home' %}">Services</a>
+            <a href="{% url 'home' %}">Contact</a>
+        </div>
+    </div>
+</footer>

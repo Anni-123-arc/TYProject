@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+    <link rel="stylesheet" href="path/to/bootstrap.min.css">
+
+    <style>
+     /* Style the login container */
+        .Login {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        /* Style the form */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        
+            /* Add box shadow */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Style form elements */
+        .form-label {
+            font-weight: bold;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .form-text {
+            color: #6c757d;
+        }
+        
+        .form-check-input {
+            margin-top: 5px;
+        }
+        
+        .btn-primary {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-image {
+            flex: 1;
+            max-width: 50%; /* Adjust the width as needed */
+            padding-right: 20px; /* Adjust spacing */
+        }
+
+        .signup-img {
+            max-width: 100%; /* Prevent image from going out of bounds */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .signup-image,
+        .signup-form {
+            max-width: 100%;
+            padding-right: 0;
+        }
+
+        /* Background image styling */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            padding-top: 56px; /* Adjust this value to match the height of your navbar */
+            height: 100%; /* Ensure the container takes up the full height of the viewport */
+        }
+
+        /* Statistics section styling */
+        .statistics {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .statistics-item {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 20%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .statistics-item h2 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .statistics-item p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            color: #666;
+        }
+        .hero-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 60px 20px; /* Adjust padding as needed */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .hero-container h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero-container p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .hero-container button {
+            font-size: 1.1em;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .hero-container button:first-of-type {
+            background-color: #007bff;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .hero-container button:last-of-type {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .hero-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+        .statistics {
+          display: flex;
+          justify-content: space-around;
+          text-align: center;
+          margin-top: 20px;
+          flex-wrap: wrap; /* Allow items to wrap */
+      }
+
+      .statistics-item {
+          flex: 1;
+          background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+          padding: 20px;
+          border-radius: 10px;
+          margin: 10px; /* Add margin between items */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .statistics-item h2 {
+          margin: 0;
+          font-size: 2em;
+          color: #333;
+      }
+
+      .statistics-item p {
+          margin: 10px 0 0;
+          font-size: 1.2em;
+          color: #666;
+      }
+      .statistics {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .statistics-item {
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        padding: 20px;
+        border-radius: 10px;
+        width: 20%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .statistics-item h2 {
+        margin: 0;
+        font-size: 2em;
+        color: #333;
+    }
+
+    .statistics-item p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+        color: #666;
+    }
+    footer {
+      background-color: #f9f9f9; /* Background color */
+      padding: 20px 0; /* Padding */
+      text-align: center; /* Center align text */
+      font-size: 14px; /* Font size */
+      color: #666; /* Text color */
+  }
+
+  footer a {
+      color: #666; /* Link color */
+      text-decoration: none; /* Remove underline */
+      margin: 0 10px; /* Margin between links */
+  }
+
+  footer a:hover {
+      color: #333; /* Change color on hover */
+  }
+
+  footer svg {
+      width: 20px; /* SVG icon size */
+      height: 20px;
+      margin-right: 5px; /* Margin between icon and text */
+      vertical-align: middle; /* Align vertically */
+  }
+
+  .footer-container {
+      max-width: 1200px; /* Set max width */
+      margin: 0 auto; /* Center align container */
+      display: flex; /* Use flexbox for layout */
+      justify-content: space-between; /* Space between items */
+      align-items: center; /* Align items vertically */
+      flex-wrap: wrap; /* Allow items to wrap */
+  }
+
+  .footer-logo {
+      font-weight: bold; /* Bold font for logo */
+      color: #333; /* Logo color */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Ensure inline display */
+      margin-right: 20px; /* Margin between logo and links */
+  }
+
+  .footer-social {
+      margin-top: 10px; /* Margin on top */
+  }
+
+  .footer-social a {
+      margin: 0; /* Remove margin */
+  }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    
+        {% block content %}
+        <div class="container">
+          <div>
+              <section class="text-gray-600 body-font">
+                  <div class="statistics">
+                      <div class="statistics-item">
+                          <h2>2.7K</h2>
+                          <p>Users</p>
+                      </div>
+                      <div class="statistics-item">
+                          <h2>1.8K</h2>
+                          <p>Subscribes</p>
+                      </div>
+                      <div class="statistics-item">
+                          <h2>35</h2>
+                          <p>Downloads</p>
+                      </div>
+                      <div class="statistics-item">
+                          <h2>4</h2>
+                          <p>Products</p>
+                      </div>
+                  </div>
+              </section>
+          </div>
+    
+          <div>
+            <section class="text-gray-600 body-font">
+                <!-- Hero section -->
+                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center hero-container">
+                    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                            <br class="hidden lg:inline-block">readymade gluten
+                        </h1>
+                        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+                        <div class="flex justify-center">
+                          <a href="{% url 'login' %}" class="inline-flex text-white border-0 py-2 px-6 focus:outline-none rounded text-lg"
+                             style="background: linear-gradient(45deg, #6b00b6, #440074); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: background 0.3s ease, box-shadow 0.3s ease;">
+                             LogIn
+                          </a>
+                          <a href="{% url 'signup' %}" class="ml-8 inline-flex text-gray-700 border-0 py-2 px-6 focus:outline-none rounded text-lg"
+                             style="background: linear-gradient(45deg, #ffdb00, #ffa700); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: background 0.3s ease, box-shadow 0.3s ease;">
+                             SignUp
+                          </a>
+                      </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+                    <!-- End of hero section -->
+                </section>
+            </div>
+         
+      </footer>
+        {% endblock %}
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

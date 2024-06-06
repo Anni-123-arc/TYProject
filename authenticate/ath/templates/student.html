@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 100px); /* Adjust height to account for the footer */
+        padding-top: 56px; /* Adjust this value to match the height of your navbar */
+        margin-bottom: 100px; /* Add margin to avoid overlap with the footer */
+    }
+
+    .form-container {
+        width: 50%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+    }
+
+    .form-container h1 {
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .form-container label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-container .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-container .btn-primary {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .form-container .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .form-container p {
+        margin-top: 10px;
+        color: #666;
+    }
+
+    .form-container p a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .form-container p a:hover {
+        color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .form-container {
+            width: 80%; /* Adjust the width of the form container for smaller screens */
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="form-container">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="Login">
+                <h1>Student Information</h1>
+            </div>
+            {% if messages %}
+            <div class="alert alert-danger" role="alert" style="padding: 10px; background-color: #f8d7da; border-color: #f5c6cb; color: #721c24;">
+                <ul class="messages" style="list-style: none; padding-left: 0;">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="username" aria-describedby="emailHelp" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="branch" class="form-label">Branch</label>
+                <input type="text" name="branch" class="form-control" id="branch" aria-describedby="emailHelp" required>
+            </div>    
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Contact</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="year" class="form-label">Year</label>
+                <input type="text" name="year" class="form-control" id="year" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input type="file" name="image" class="form-control" id="image" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Apply</button>
+            <p>Already have an account? <a href="{% url 'login' %}">Click here</a></p>
+        </form>
+    </div>
+</div>
+{% endblock %}
